@@ -1,0 +1,24 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.wordWrap": "on",
+        "editor.fontSize": 16,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeLens": false
+      },
+      "extensions": [
+        "GitHub.codespaces",
+        "GitHub.vscode-pull-request-github",
+        "tinkertrain.theme-panda",
+        "Tyriar.lorem-ipsum",
+        "esbenp.prettier-vscode",
+        "ritwickdey.LiveServer",
+        "ms-vsliveshare.vsliveshare"
+      ]
+    }
+  }
+}

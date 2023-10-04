@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title> Hana Haddad | Portfolio </title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" type="application/javascript" defer></script>   
-  </head>
-  <!---how do I put the logo on the header to align  with the nav menu---->
-  </header>
-    <body>
-      <div class="navigation">
-        <a href="#" class="logo" ><img src="/assets/Logo/logo.png" alt="logo" style="width:169px;height:41px;object-fit:cover" width="169" height="41" id="logo_header"></a>
-        <div class="header">   
-            <header id="header-center">
-                <ul id="menu">
-                    <li id="element">
-                        <a href="#">About</a>
-                    </li>
-                    <li id="element">
-                        <a href="#">Collection</a>
-                    </li>
-                    <li id="element">
-                      <a href="#">Work</a>
-                  </li>
-                </ul>
-        </header>
-        </div>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hana Haddad | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" type="application/javascript" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="#"><img src="assets/About%20Page/H-LOGO.png" alt="logo"></a>
+  </div>
+  <div class="name">
+    <ul>Hana Haddad</ul>
+  </div>
+  <nav class="navigation">
+    <ul>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Playground</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+</header>
 
-     <!---- planning to have About me on a different page src="/assets/About Page/profilePicture.png" 
-        alt="profile picture" 
-        width="100%" height="100%"> </div> <p>I'm a strategic planner turned learning designer.</p>
-        <p>Based in Brooklyn, but originally from Jakarta. 
-          I specialize in exploring what motivates people and designing impactful learning spaces.<br> My work is a testament to the inspiration I draw from the books I read, the people I meet, and the ideas I play with.<br> </p>
-      </section> ---->
-      <section> 
-      <div class="gallery">
-        <div class="container">
-          <div class="grid">
-            <div>
-              <figure class="img-container">
-                <img img src="/assets/tickle/coverlogo.jpg" alt="Tickle" style="object-fit: cover; width: 100%;">
-                <figcaption class="img-content">
-                  <h1 class="title">@Tickle</h1>
-                  <h2 class="category">Learning Design</h2>
-                </figcaption>
-              </figure>
-            </div>
-            <div>
-              <figure class="img-container">
-                <img img src="/assets/learning in the wild/coverbookmock.jpg "style="object-fit: cover; width: 100%;">
-                <figcaption class="img-content">
-                  <h1 class="title">Learning in the Wild</h1>
-                  <h2 class="category">Learning Design</h2>
-                </figcaption>
-              </figure>
-            </div>
-            <div>
-              <figure class="img-container">
-                <img src="/assets/cannes young lions/younglionscover.jpg" alt="Young Lions" style="object-fit: cover; width: 100%;">
-                <figcaption class="img-content">
-                  <h1 class="title">Cannes Young Lions</h1>
-                  <h2 class="category">Strategic Planning, UX</h2>
-                </figcaption>
-              </figure>
-            </div>
-      </section>
-    </main>
-    
-    <footer>
-      &copy;2023 Hana Haddad | Portfolio
-      </footer>
-  </body>
+<!--- <section id="introduction">
+  <div class="who-what">
+    <div class="container">
+      <h1 class="who">Hana Haddad is a</h1>
+      <h2 class="what">
+        <div class="scrolling-text">
+          <span>Strategic Planner</span>
+          <span>Learning Designer</span>
+        </div>
+        <span class="static-text">based in New York City</span>.
+      </h2>
+    </div>
+    <div class="homepage image">
+      <img src="assets/About%20Page/HOMEPAGE_2.png">
+    </div>
+  </div> --->
+
+<main>
+  <section id="gallery">
+    <!-- Gallery Content -->
+    <div class="gallery-item">
+      <div class="img-container">
+        <img src="assets/tickle/coverlogo.jpg" alt="Tickle">
+      </div>
+      <div class="caption">
+        <h1 class="title">@Tickle</h1>
+        <h2 class="category">Learning Design</h2>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="img-container">
+        <img src="assets/learning in the wild/coverbookmock.jpg" alt="Learning in the Wild">
+      </div>
+      <div class="caption">
+        <h1 class="title">Learning in the Wild</h1>
+        <h2 class="category">Learning Design</h2>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="img-container">
+        <img src="assets/cannes young lions/younglionscover.jpg" alt="Cannes Young Lions">
+      </div>
+      <div class="caption">
+        <h1 class="title">Cannes Young Lions</h1>
+        <h2 class="category">Strategic Planning, UX</h2>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2023 Hana Haddad | Portfolio
+</footer>
+</body>
 </html>

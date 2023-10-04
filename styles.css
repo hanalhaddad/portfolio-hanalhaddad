@@ -1,112 +1,130 @@
-* {
-  box-sizing: border-box;
-  }
-}
-.navigation {
+/* CSS for header and navigation */
+header {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-#logo_header {
-  height: 110px;
-  width: 110px;
-  position: relative;
-  text-decoration: none;
-  margin-left: 54px;
-  margin-top: 25px;
+.logo img {
+  width: auto;
+  height: 41px;
+  object-fit: cover;
 }
 
-ul {
-  text-align: center;
+.name ul {
+  margin-inline: auto;
+  font-family: Helvetica;
 }
 
-#menu {
-  font-family: 'nagoda';
-  font-size: 25px;
-  text-decoration: none;
+.navigation ul {
   list-style: none;
-  list-style-type: none;
-  align-items: center;
+  display: flex;
+  font-family: Helvetica;
 }
 
-#header {
+.navigation li {
+  margin-right: 20px;
+  font-family: Helvetica;
+}
+
+/* CSS for the "Introduction" section
+.who-what {
   overflow: hidden;
-  background: none;
-  padding: 20px 10px;
-  padding-top: 695px;
-  display: flex;
-  flex-direction: row;
+  font-size: 20px;
+  text-align: left;
 }
 
-#menu {
-  display: flex;
-  flex-direction: row;
-}
-
-.header a {
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 25px;
-  line-height: 15px;
-  border-radius: 5px;
-  margin: 70px;
-}
-
-.header a:hover {
-  filter:invert(orange); 
-}
-
-li {
-  line-height: normal;
-}
-
-.header-center {
-  height: 100px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  right: 0;
+.container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-
-body {
-  font-family: Helvetica, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5;
-  color: gray;
-  background: white;
+.homepage {
+  width: auto;
+  height: 50px;
 }
 
-header {
-  background-color: white;
-  width: auto;
-  height: auto;
+/* CSS for the scrolling animation
+.scrolling-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
-nav {
-  width: auto;
-  height: auto;
+.scroll-text {
+  display: inline-block;
+  padding-right: 1em;
+  text-decoration: underline;
+  animation: scrollText 10s linear infinite alternate;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}*/
+
+
+/* CSS for gallery */
+#gallery {
+  margin: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: last baseline;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
+.gallery-item {
+  flex: 1;
+  max-width: calc(33.33% - 20px);
+  position: relative;
+  margin-bottom: 20px;
 }
 
-  footer {
-    background-color: #000000;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }  
+.img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 4px;
+  padding-bottom: 4vw;
+}
+
+.caption h1 {
+  margin: 0;
+  width: 50%;
+  float: left;
+  font-size: 15px;
+  line-height: 1vh;
+  text-align: left;
+  letter-spacing: .03em;
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-top: 4px;
+}
+.caption h2 {
+  margin: 0;
+  width: 50%;
+  float: right;
+  font-size: 15px;
+  line-height: 1vh;
+  text-align: right;
+  letter-spacing: .03em;
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-top: 4px;
+}
+

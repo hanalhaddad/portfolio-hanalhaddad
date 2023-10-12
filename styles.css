@@ -1,4 +1,4 @@
-/* CSS for header and navigation */
+/* CSS for the header and navigation */
 header {
   display: flex;
   align-items: center;
@@ -12,9 +12,16 @@ header {
   object-fit: cover;
 }
 
-.name ul {
-  margin-inline: auto;
-  font-family: Helvetica;
+/* CSS for the navigation links */
+.navigation a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navigation a:hover {
+  color: #FF5100;
+  text-decoration: underline;
 }
 
 .navigation ul {
@@ -28,11 +35,25 @@ header {
   font-family: Helvetica;
 }
 
-/* CSS for the "Introduction" section
+/* CSS for the "Introduction" section */
 .who-what {
-  overflow: hidden;
-  font-size: 20px;
-  text-align: left;
+  font-size: 1.5rem;
+  font-family: Helvetica;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem;
+}
+
+.who, .what {
+  margin: 0;
+}
+
+.homepage {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
 }
 
 .container {
@@ -40,50 +61,61 @@ header {
   margin: 0 auto;
 }
 
-.homepage {
-  width: auto;
-  height: 50px;
-}
-
-/* CSS for the scrolling animation
+/* CSS for the scrolling animation */
 .scrolling-text {
   display: inline-block;
-  overflow: hidden;
+  color: #FF5100;
+  text-decoration: underline;
   white-space: nowrap;
   width: 100%;
+  overflow: hidden;
+  rollText 8s linear infinite;
 }
 
-.scroll-text {
-  display: inline-block;
-  padding-right: 1em;
-  text-decoration: underline;
-  animation: scrollText 10s linear infinite alternate;
-}
-
-@keyframes scrollText {
+@keyframes rollText {
   0% {
-    transform: translateY(100%);
+    transform: translateY(0);
   }
   100% {
     transform: translateY(-100%);
   }
-}*/
+}
 
+@keyframes fadeOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 
 /* CSS for gallery */
 #gallery {
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 20px;
 }
 
 .gallery-item {
-  flex: 1;
+  flex: 0 1 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
   position: relative;
   margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  #gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-item {
+    flex: 1;
+    max-width: 100%;
+  }
 }
 
 .img-container img {
@@ -99,6 +131,8 @@ header {
   border-top-style: solid;
   padding-top: 4px;
   padding-bottom: 4vw;
+  text-decoration: none;
+  color: black;
 }
 
 .caption h1 {
@@ -114,6 +148,7 @@ header {
   font-style: normal;
   padding-top: 4px;
 }
+
 .caption h2 {
   margin: 0;
   width: 50%;
@@ -128,3 +163,26 @@ header {
   padding-top: 4px;
 }
 
+/* Add this CSS for the footer */
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.social-links li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social-links li a:hover {
+  color: #FF5100;
+}

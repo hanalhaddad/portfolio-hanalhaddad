@@ -13,39 +13,34 @@
   <div class="logo">
     <a href="#"><img src="assets/About%20Page/H-LOGO.png" alt="logo"></a>
   </div>
-  <div class="name">
-    <ul>Hana Haddad</ul>
-  </div>
   <nav class="navigation">
     <ul>
-      <li><a href="#">Work</a></li>
-      <li><a href="#">Playground</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="work.html">Work</a></li> <!-- Add the href attribute with the target URL -->
+      <li><a href="playground.html">Playground</a></li> <!-- Add the href attribute with the target URL -->
+      <li><a href="about.html">About</a></li> <!-- Add the href attribute with the target URL -->
     </ul>
   </nav>
 </header>
 
-<!--- <section id="introduction">
+<section id="introduction">
   <div class="who-what">
     <div class="container">
       <h1 class="who">Hana Haddad is a</h1>
       <h2 class="what">
-        <div class="scrolling-text">
-          <span>Strategic Planner</span>
-          <span>Learning Designer</span>
+        <div class="scrolling-text" id="rollingText">
+          <!-- JavaScript will add rolling text here -->
         </div>
-        <span class="static-text">based in New York City</span>.
+        <span class="static-text">based in New York City</span>
       </h2>
     </div>
-    <div class="homepage image">
-      <img src="assets/About%20Page/HOMEPAGE_2.png">
-    </div>
-  </div> --->
+  </div>
+</section>
 
 <main>
   <section id="gallery">
     <!-- Gallery Content -->
     <div class="gallery-item">
+      <a href="put_link_here.html">
       <div class="img-container">
         <img src="assets/tickle/coverlogo.jpg" alt="Tickle">
       </div>
@@ -53,9 +48,11 @@
         <h1 class="title">@Tickle</h1>
         <h2 class="category">Learning Design</h2>
       </div>
+      </a>
     </div>
 
     <div class="gallery-item">
+      <a href="put_link_here.html">
       <div class="img-container">
         <img src="assets/learning in the wild/coverbookmock.jpg" alt="Learning in the Wild">
       </div>
@@ -63,9 +60,35 @@
         <h1 class="title">Learning in the Wild</h1>
         <h2 class="category">Learning Design</h2>
       </div>
+      </a>
     </div>
 
     <div class="gallery-item">
+      <a href="put_link_here.html">
+        <div class="img-container">
+          <img src="assets/social%20pop-up/mockupcover.jpg" alt="Social Pop-up">
+        </div>
+        <div class="caption">
+          <h1 class="title">Social Pop-up</h1>
+          <h2 class="category">UX</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="gallery-item">
+      <a href="put_link_here.html">
+        <div class="img-container">
+          <img src="assets/Instructional%20Design%20Creative/24hour-cover.png" alt="24-hour">
+        </div>
+        <div class="caption">
+          <h1 class="title">Social Pop-up</h1>
+          <h2 class="category">UX</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="gallery-item">
+      <a href="put_link_here.html">
       <div class="img-container">
         <img src="assets/cannes young lions/younglionscover.jpg" alt="Cannes Young Lions">
       </div>
@@ -73,12 +96,16 @@
         <h1 class="title">Cannes Young Lions</h1>
         <h2 class="category">Strategic Planning, UX</h2>
       </div>
+      </a>
     </div>
   </section>
 </main>
 
 <footer>
-  &copy; 2023 Hana Haddad | Portfolio
+  <ul class="social-links">
+    <li><a href="https://www.linkedin.com/in/hanalhaddad/" target="_blank">LinkedIn</a></li>
+    <li><a href="https://www.behance.net/hanahaddad?locale=en_US" target="_blank">Behance</a></li>
+    <li><a href="mailto:hana.haddad@nyu.com">Email</a></li>
+    <li><a href="https://www.instagram.com/hanalhaddad/?hl=en" target="_blank">Instagram</a></li>
+  </ul>
 </footer>
-</body>
-</html>

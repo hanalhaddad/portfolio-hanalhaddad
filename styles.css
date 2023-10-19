@@ -62,33 +62,30 @@ header {
 }
 
 /* CSS for the scrolling animation */
-.scrolling-text {
+@keyframes textChangeAndFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(20);
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.scroll-text {
   display: inline-block;
   color: #FF5100;
   text-decoration: underline;
   white-space: nowrap;
   width: 100%;
   overflow: hidden;
-  rollText 8s linear infinite;
+  animation: textChangeAndFadeOut 4s linear infinite alternate, textFadeIn 2s linear alternate;
 }
 
-@keyframes rollText {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes fadeOut {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
 
 /* CSS for gallery */
 #gallery {

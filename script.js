@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateText();
 
-    setInterval(updateText, 2000);
+    setInterval(updateText, 4000); // Adjust the timing to match your animations (4000 milliseconds)
 });

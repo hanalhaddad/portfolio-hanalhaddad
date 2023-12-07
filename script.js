@@ -21,3 +21,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(updateText, 4000); // Adjust the timing to match your animations (4000 milliseconds)
 });
+
+// JavaScript functions for modal
+function openModal(modalId, event) {
+    event.preventDefault(); // Prevent default link behavior
+    document.getElementById(modalId).classList.add('active');
+    setTimeout(function() {
+        document.getElementById(modalId).style.display = 'block';
+    }, 100); // Adjust the delay (in milliseconds) for the darkening effect
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
+    setTimeout(function() {
+        document.getElementById(modalId).style.display = 'none';
+    }, 300); // Adjust the delay (in milliseconds) for the closing effect
+}
+
+

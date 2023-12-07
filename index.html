@@ -6,7 +6,9 @@
   <title>Hana Haddad | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="script.js" type="application/javascript" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 <header>
@@ -15,32 +17,32 @@
   </div>
   <nav class="navigation">
     <ul>
-      <li><a href="work.html">Work</a></li> <!-- Add the href attribute with the target URL -->
-      <li><a href="playground.html">Playground</a></li> <!-- Add the href attribute with the target URL -->
-      <li><a href="about.html">About</a></li> <!-- Add the href attribute with the target URL -->
+      <li><a href="https://www.linkedin.com/in/hanalhaddad/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/hanahaddad?locale=en_US" target="_blank">Behance</a></li>
+      <li><a href="mailto:hana.haddad@nyu.com">Email</a></li>
     </ul>
   </nav>
 </header>
 
 <section id="introduction">
-  <div class="who-what">
-    <div class="container">
-      <h1 class="who">Hana Haddad is a</h1>
-      <h2 class="what">
-        <div class="scroll-text" id="rollingText">
+    <div class="who-what">
+      <div class="container">
+        <h1 class="who">Hana Haddad is a</h1>
+        <h2 class="what">
+          <div class="scroll-text" id="rollingText">
           <!-- JavaScript will add rolling text here -->
-        </div>
-        <span class="static-text">based in New York City</span>
-      </h2>
+         </div>
+          <span class="static-text">based in New York City</span>
+        </h2>
+      </div>
     </div>
-  </div>
 </section>
 
 <main>
   <section id="gallery">
     <!-- Gallery Content -->
     <div class="gallery-item">
-      <a href="put_link_here.html">
+      <a href="#" onclick="openModal('tickle', event)">
       <div class="img-container">
         <img src="assets/tickle/coverlogo.jpg" alt="Tickle">
       </div>
@@ -51,8 +53,27 @@
       </a>
     </div>
 
+    <!-- Modal for Gallery Item 1 -->
+    <div id="tickle" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('tickle')">&times;</span>
+        <div class="modal-header">
+          <h1>@Tickle</h1>
+          <div class="tools">
+            <i class="fab fa-figma"></i>
+            <!-- where should I get icons? the current source seem to be limited -->
+          </div>
+        </div>
+        <!-- Content for the modal/pop-up -->
+        <div class="modal-main-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur culpa dicta dolor eaque error eveniet explicabo ipsa ipsam molestiae nostrum odio, perferendis perspiciatis voluptate voluptatem? Illo maiores porro voluptas!</p>
+          <!-- I want to add a gallery of my projects here without changing the layout -->
+        </div>
+      </div>
+    </div>
+
     <div class="gallery-item">
-      <a href="put_link_here.html">
+      <a href="#" onclick="openModal('litw', event)">
       <div class="img-container">
         <img src="assets/learning in the wild/coverbookmock.jpg" alt="Learning in the Wild">
       </div>
@@ -63,8 +84,24 @@
       </a>
     </div>
 
+    <!-- Modal for Gallery Item 2 -->
+    <div id="litw" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('litw')">&times;</span>
+        <div class="modal-header">
+          <h1>Learning in the Wild</h1>
+          <div class="tools">
+            <i class="fab fa-figma"></i>
+          </div>
+        </div>
+        <div class="modal-main-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur culpa dicta dolor eaque error eveniet explicabo ipsa ipsam molestiae nostrum odio, perferendis perspiciatis voluptate voluptatem? Illo maiores porro voluptas!</p>
+        </div>
+      </div>
+    </div>
+
     <div class="gallery-item">
-      <a href="put_link_here.html">
+      <a href="#" onclick="openModal('socialpopup', event)">
         <div class="img-container">
           <img src="assets/social%20pop-up/mockupcover.jpg" alt="Social Pop-up">
         </div>
@@ -75,37 +112,107 @@
       </a>
     </div>
 
+    <!-- Modal for Gallery Item 3 -->
+    <div id="socialpopup" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('socialpopup')">&times;</span>
+        <div class="modal-header">
+          <h1>Social Pop-up</h1>
+          <div class="tools">
+            <i class="fab fa-figma"></i>
+          </div>
+        </div>
+        <div class="modal-main-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur culpa dicta dolor eaque error eveniet explicabo ipsa ipsam molestiae nostrum odio, perferendis perspiciatis voluptate voluptatem? Illo maiores porro voluptas!</p>
+        </div>
+      </div>
+    </div>
+
     <div class="gallery-item">
-      <a href="put_link_here.html">
+      <a href="#" onclick="openModal('24hour', event)">
         <div class="img-container">
           <img src="assets/Instructional%20Design%20Creative/24hour-cover.png" alt="24-hour">
         </div>
         <div class="caption">
-          <h1 class="title">Social Pop-up</h1>
+          <h1 class="title">24-hour Idea Blitz</h1>
           <h2 class="category">UX</h2>
         </div>
       </a>
     </div>
 
+    <!-- Modal for Gallery Item 4 -->
+    <div id="24hour" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('24hour')">&times;</span>
+        <div class="modal-header">
+          <h1>24-hour Idea Blitz</h1>
+          <div class="tools">
+            <i class="fab fa-figma"></i>
+          </div>
+        </div>
+        <div class="modal-main-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur culpa dicta dolor eaque error eveniet explicabo ipsa ipsam molestiae nostrum odio, perferendis perspiciatis voluptate voluptatem? Illo maiores porro voluptas!</p>
+        </div>
+      </div>
+    </div>
+
+
     <div class="gallery-item">
-      <a href="put_link_here.html">
-      <div class="img-container">
-        <img src="assets/cannes young lions/younglionscover.jpg" alt="Cannes Young Lions">
-      </div>
-      <div class="caption">
-        <h1 class="title">Cannes Young Lions</h1>
-        <h2 class="category">Strategic Planning, UX</h2>
-      </div>
+      <a href="#" onclick="openModal('cannes', event)">
+        <div class="img-container">
+          <img src="assets/cannes young lions/younglionscover.jpg" alt="Cannes Young Lions">
+        </div>
+        <div class="caption">
+          <h1 class="title">Cannes Young Lions</h1>
+          <h2 class="category">Strategic Planning, UX</h2>
+        </div>
       </a>
     </div>
-  </section>
-</main>
 
-<footer>
-  <ul class="social-links">
-    <li><a href="https://www.linkedin.com/in/hanalhaddad/" target="_blank">LinkedIn</a></li>
-    <li><a href="https://www.behance.net/hanahaddad?locale=en_US" target="_blank">Behance</a></li>
-    <li><a href="mailto:hana.haddad@nyu.com">Email</a></li>
-    <li><a href="https://www.instagram.com/hanalhaddad/?hl=en" target="_blank">Instagram</a></li>
-  </ul>
-</footer>
+    <!-- Modal for Gallery Item 5 -->
+    <div id="cannes" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('cannes')">&times;</span>
+        <div class="modal-header">
+          <h1>Cannes Young Lions</h1>
+          <div class="tools">
+            <i class="fab fa-figma"></i>
+          </div>
+        </div>
+        <div class="modal-main-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur culpa dicta dolor eaque error eveniet explicabo ipsa ipsam molestiae nostrum odio, perferendis perspiciatis voluptate voluptatem? Illo maiores porro voluptas!</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-item">
+      <a href="#" onclick="openModal('afterschool', event)">
+        <div class="img-container">
+          <img src="assets/Afterschool/Afterschool_Assets-02.png" alt="Afterschool">
+        </div>
+        <div class="caption">
+          <h1 class="title">Afterschool</h1>
+          <h2 class="category">UX</h2>
+        </div>
+      </a>
+
+
+      <!-- Modal for Gallery Item 6 -->
+      <div id="afterschool" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('afterschool')">&times;</span>
+          <div class="modal-header">
+            <h1>Afterschool</h1>
+            <div class="tools">
+              <i class="fab fa-figma"></i>
+            </div>
+          </div>
+          <div class="modal-main-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur culpa dicta dolor eaque error eveniet explicabo ipsa ipsam molestiae nostrum odio, perferendis perspiciatis voluptate voluptatem? Illo maiores porro voluptas!</p>
+          </div>
+        </div>
+      </div>
+</body>
+</section>
+</main>

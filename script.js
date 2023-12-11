@@ -14,13 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateText() {
         rollingText.textContent = textArray[currentIndex];
-        currentIndex = (currentIndex + 1) % textArray.length;
+        rollingText.classList.add("show");
+        setTimeout(function() {
+            rollingText.classList.remove("show");
+            currentIndex = (currentIndex + 1) % textArray.length;
+        }, 3000); // Wait 3 seconds before changing the text
+        setTimeout(updateText, 4000); // Wait 4 seconds before running the next text change
     }
 
-    updateText();
-
-    setInterval(updateText, 4000); // Adjust the timing to match your animations (4000 milliseconds)
+    updateText(); // Start the rotation
 });
+
+
 
 // JavaScript functions for modal
 function openModal(modalId, event) {
@@ -37,5 +42,25 @@ function closeModal(modalId) {
         document.getElementById(modalId).style.display = 'none';
     }, 300); // Adjust the delay (in milliseconds) for the closing effect
 }
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModalWithEscape(); // Call the function to close modal
+    }
+});
+
+function closeModalWithEscape() {
+    // Get all the modal elements
+    const modals = document.querySelectorAll('.modal');
+
+    // Loop through each modal and close it
+    modals.forEach(modal => {
+        if (modal.classList.contains('active')) {
+            const modalId = modal.getAttribute('id');
+            closeModal(modalId);
+        }
+    });
+}
+
+
 
 

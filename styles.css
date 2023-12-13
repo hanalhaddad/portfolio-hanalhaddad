@@ -103,6 +103,27 @@ header {
   animation: textFadeIn 1s linear forwards;
 }
 
+footer {
+  text-align: center;
+  background-color: white; /* Match with existing white background */
+  padding: 20px 0;
+  font-family: aktiv-grotesk, sans-serif;
+  width: 100%;
+  position: fixed;
+  bottom: -100px; /* Initially hide the footer */
+  transition: bottom 0.3s;
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+body {
+  margin: 0;
+  padding-bottom: 60px; /* Add padding to the bottom of the body to accommodate the footer */
+}
+
+/* Adjust this style to make the footer visible when scrolling to the bottom */
+body.show-footer footer {
+  bottom: 0;
+}
 
 /* CSS for gallery */
 #gallery {
@@ -189,6 +210,7 @@ header {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
   transition: opacity 0.3s;
+  justify-content: center;
   opacity: 0;
   pointer-events: none;
 }
@@ -208,6 +230,8 @@ header {
   max-width: 1000px;
   height: 80%;
   max-height: 90vh;
+  border-radius: 40px;
+  /*justify-content: center;*/
   padding: 20px;
   margin-top: 60px;
   display: flex;
@@ -290,6 +314,13 @@ header {
   max-width: 100%;
   height: auto;
 }
+
+footer {
+  text-align: center; /* Center-align the content inside the footer */
+  background-color: #f0f0f0; /* Add a background color */
+  padding: 20px 0; /* Add padding for spacing */
+}
+
 
 
 

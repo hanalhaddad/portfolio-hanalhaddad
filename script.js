@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        let body = document.querySelector('body');
+        let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        let scrollPosition = window.scrollY;
+
+        if (scrollPosition >= scrollHeight - 100) {
+            body.classList.add('show-footer');
+        } else {
+            body.classList.remove('show-footer');
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const rollingText = document.getElementById("rollingText");
     const textArray = [
@@ -24,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateText(); // Start the rotation
 });
-
-
 
 // JavaScript functions for modal
 function openModal(modalId, event) {

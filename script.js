@@ -75,6 +75,19 @@ function closeModalWithEscape() {
 
 const galleryItems = [
     {
+        "modalId": "cannes",
+        "coverImg": "assets/cannes young lions/Cover_CannesYoungLions.png",
+        "title": "Cannes Young Lions",
+        "category": "Strategic Planning, UX",
+        "modalMedia": [
+            modalImage("assets/cannes%20young%20lions/Cover_CannesYoungLions.png"),
+            modalImage("assets/cannes%20young%20lions/Brief_Cannes.png"),
+            modalImage("assets/cannes%20young%20lions/Howitworks_Cannes.png"),
+            modalImage("assets/cannes%20young%20lions/Magazine%20Mockup.jpg")
+        ]
+    },
+
+    {
         "modalId": "tickle",
         "coverImg": "assets/tickle/coverlogo.jpg",
         "title": "@Tickle",
@@ -108,6 +121,7 @@ const galleryItems = [
             modalImage("assets/social%20pop-up/sketch_2.png")
         ]
     },
+
     {
         "modalId": "24hour",
         "coverImg": "assets/24-hour%20idea%20blitz/logo_test.png",
@@ -119,31 +133,15 @@ const galleryItems = [
             modalVideo("assets/24-hour%20idea%20blitz/iMac_Mockup_24Blitz.mp4", "video/mp4")
         ]
     },
+
     {
-        "modalId": "cannes",
-        "coverImg": "assets/cannes young lions/Cover_CannesYoungLions.png",
-        "title": "Cannes Young Lions",
-        "category": "Strategic Planning, UX",
+        "modalId": "workinclass",
+        "coverImg": "assets/workinclass/workinclass_Assets_cover-05.png",
+        "title": "workinclass",
+        "category": "Learning Design",
         "modalMedia": [
-            modalImage("assets/cannes%20young%20lions/Cover_CannesYoungLions.png"),
-            modalImage("assets/cannes%20young%20lions/Brief_Cannes.png"),
-            modalImage("assets/cannes%20young%20lions/Howitworks_Cannes.png"),
-            modalImage("assets/cannes%20young%20lions/Magazine%20Mockup.jpg")
-        ]
-    },
-    {
-        "modalId": "afterschool",
-        "coverImg": "assets/Afterschool/Afterschool_Assets-02.png",
-        "title": "Afterschool",
-        "category": "UX",
-        "modalMedia": [
-            modalImage("assets/Afterschool/Afterschool_Assets-02.png"),
-            modalImage("assets/Afterschool/background_after.jpg"),
-            modalImage("assets/Afterschool/problem_after.jpg"),
-            modalImage("assets/Afterschool/problem_interview.jpg"),
-            modalImage("assets/Afterschool/hmw_after.jpg"),
-            modalImage("assets/Afterschool/mockupafter_1.jpg"),
-            modalImage("assets/Afterschool/mockupafter_2.jpg.jpg")
+            modalImage("assets/workinclass/workinschool_Assets_cover-05.png"),
+            modalImage("assets/workiinclass/ECT_workinclass_poster_rgb.jpg"),
         ]
     }
 ]

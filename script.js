@@ -168,7 +168,7 @@ const galleryLoaded = new Event("galleryLoaded")
 
 const galleryItemTemplateString = `
   <div class="gallery-item">
-        <a href="#" onClick="openModal('{{modalId}}')">
+        <a href="#" class="clickContainer">
             <div class="img-container">
                 <img src="{{coverImg}}" alt="{{title}}">
             </div>
@@ -200,7 +200,9 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2) {
 function createGalleryItemWithTemplate(galleryElt) {
     const container = document.createElement("div");
     container.innerHTML = galleryItemTemplate(galleryElt);
-    return container.children[0];
+    const out = container.children[0];
+    out.getElementsByClassName("clickContainer")[0].onclick = openModal.bind(this, galleryElt.modalId);
+    return out;
 }
 
 const modalTemplateString = `

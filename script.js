@@ -88,16 +88,26 @@ const galleryItems = [
     },
 
     {
-        "modalId": "tickle",
-        "coverImg": "assets/tickle/coverlogo.jpg",
-        "title": "@Tickle",
-        "category": "Learning Design",
+        "modalId": "iLRN2024",
+        "coverImg": "assets/iLRN2024/iLRN_thumbnail.png",
+        "title": "iLRN 2024",
+        "category": "Published Paper",
         "modalMedia": [
-            modalImage("assets/tickle/iphone_mock.png"),
-            modalImage("assets/tickle/project_tickle_info.png"),
-            modalImage("assets/tickle/tickle_grid.png")
+            modalImage("assets/iLRN2024/iLRN_cover.png"),
+            modalImage("assets/iLRN2024/iLRN_abstract.png"),
         ]
     },
+
+    {
+        "modalId": "workinclass",
+        "coverImg": "assets/workinclass/workinclass_logo_cover.png",
+        "title": "workinclass",
+        "category": "Learning Design",
+        "modalMedia": [
+            modalImage("assets/workinclass/ECT_workinclass_poster_rgb.jpg"),
+        ]
+    },
+
     {
         "modalId": "litw",
         "coverImg": "assets/learning in the wild/coverbookmock.jpg",
@@ -107,18 +117,6 @@ const galleryItems = [
             modalImage("assets/learning%20in%20the%20wild/coverbookmock.jpg"),
             modalImage("assets/learning%20in%20the%20wild/project_info_litw.png"),
             modalImage("assets/learning%20in%20the%20wild/book_contents_mockup.jpg")
-        ]
-    },
-    {
-        "modalId": "socialpopup",
-        "coverImg": "assets/social%20pop-up/Mockupcover.jpg",
-        "title": "Social Pop-up",
-        "category": "UX",
-        "modalMedia": [
-            modalImage("assets/social%20pop-up/Mockupcover.jpg"),
-            modalImage("assets/social%20pop-up/projectinfopopup.png"),
-            modalImage("assets/social%20pop-up/sketch_1.png"),
-            modalImage("assets/social%20pop-up/sketch_2.png")
         ]
     },
 
@@ -135,15 +133,18 @@ const galleryItems = [
     },
 
     {
-        "modalId": "workinclass",
-        "coverImg": "assets/workinclass/workinclass_Assets_cover-05.png",
-        "title": "workinclass",
-        "category": "Learning Design",
+        "modalId": "socialpopup",
+        "coverImg": "assets/social%20pop-up/Mockupcover.jpg",
+        "title": "Social Pop-up",
+        "category": "UX",
         "modalMedia": [
-            modalImage("assets/workinclass/workinschool_Assets_cover-05.png"),
-            modalImage("assets/workiinclass/ECT_workinclass_poster_rgb.jpg"),
+            modalImage("assets/social%20pop-up/Mockupcover.jpg"),
+            modalImage("assets/social%20pop-up/projectinfopopup.png"),
+            modalImage("assets/social%20pop-up/sketch_1.png"),
+            modalImage("assets/social%20pop-up/sketch_2.png")
         ]
-    }
+    },
+
 ]
 
 // used when defining gallery item elements

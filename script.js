@@ -166,111 +166,81 @@ function modalVideo(src, srcType) {
 
 const galleryLoaded = new Event("galleryLoaded")
 
+const galleryItemTemplateString = `
+  <div class="gallery-item">
+        <a href="#" class="clickContainer">
+            <div class="img-container">
+                <img src="{{coverImg}}" alt="{{title}}">
+            </div>
+            <div class="caption">
+                <h1 class="title">{{title}}</h1>
+                <h2 class="category">{{category}}</h2>
+            </div>
+        </a>
+    </div>
+`;
+const galleryItemTemplate = Handlebars.compile(galleryItemTemplateString);
+
 // add the gallery items when the document loads!
 document.addEventListener("DOMContentLoaded", function () {
     const galleryContainer = document.getElementById("gallery");
     galleryItems.forEach((galleryElt) => {
         // first add the gallery item
-        const galleryItem = createElementWithClass("div", "gallery-item");
-        const clickTargetContainer = document.createElement("a");
-        clickTargetContainer.addEventListener("click", openModal.bind(this, galleryElt.modalId));
-        clickTargetContainer.setAttribute("href", "#");
-        galleryItem.appendChild(clickTargetContainer);
-        // cover image
-        const coverContainer = createElementWithClass("div", "img-container");
-        const coverImg = simpleImage(galleryElt.coverImg);
-        coverContainer.appendChild(coverImg);
-        clickTargetContainer.appendChild(coverContainer);
-        // caption
-        const caption = createElementWithClass("div", "caption");
-        const captionChildren = [
-            simpleTextElementWithClass("h1", "title", galleryElt.title),
-            simpleTextElementWithClass("h2", "category", galleryElt.category),
-        ];
-        caption.append(...captionChildren);
-        clickTargetContainer.appendChild(caption);
-
-        // now add gallery item to section
-        galleryContainer.appendChild(galleryItem);
+        galleryContainer.appendChild(createGalleryItemWithTemplate(galleryElt));
         // now add the modal for the item as a sibling
-        galleryContainer.appendChild(createModal(galleryElt));
+        galleryContainer.appendChild(createModalWithTemplate(galleryElt));
     });
     document.dispatchEvent(galleryLoaded);
 });
 
-function createModal(galleryElt) {
-    const modalContainer = createElementWithClass("div", "modal");
-    modalContainer.setAttribute("id", galleryElt.modalId);
-    const modalContent = createElementWithClass("div", "modal-content");
-    modalContainer.appendChild(modalContent);
-    // modal controls
-    const closeButton = document.createElement("span");
-    closeButton.classList.add("close");
-    closeButton.onclick = closeModal.bind(this, galleryElt.modalId);
-    closeButton.textContent = "\u00d7";
-    modalContent.appendChild(closeButton);
-    const modalHeader = createElementWithClass("div", "modal-header");
-    modalHeader.appendChild(simpleTextElement("h1", galleryElt.title));
-    modalContent.append(modalHeader);
+Handlebars.registerHelper('ifEquals', function(arg1, arg2) {
+    return (arg1 === arg2);
+});
 
-    const tools = createElementWithClass("div", "tools");
-    const figmaContainer = document.createElement("i");
-    figmaContainer.classList.add(...["fab", "fa-figma"]);
-    tools.appendChild(figmaContainer);
-    modalHeader.append(tools);
-
-    // modal main content
-    const modalMainContent = createElementWithClass("div", "modal-main-content");
-    const modalImageContainer = createElementWithClass("div", "modal-image-container");
-    // add media elements to image container
-    const modalMediaElements = galleryElt.modalMedia.map(mediaElt => {
-        if (mediaElt.type === "video") {
-            return createVideoElement(mediaElt.src, mediaElt.srcType);
-        } else if (mediaElt.type === "image") {
-            return simpleImage(mediaElt.src);
-        }
-    });
-    modalImageContainer.append(...modalMediaElements);
-    modalMainContent.appendChild(modalImageContainer);
-    modalContent.appendChild(modalMainContent);
-    return modalContainer;
-}
-
-function simpleTextElement(eltType, text) {
-    const out = document.createElement(eltType);
-    out.textContent = text;
+function createGalleryItemWithTemplate(galleryElt) {
+    const container = document.createElement("div");
+    container.innerHTML = galleryItemTemplate(galleryElt);
+    const out = container.children[0];
+    out.getElementsByClassName("clickContainer")[0].onclick = openModal.bind(this, galleryElt.modalId);
     return out;
 }
 
-function simpleTextElementWithClass(eltType, className, text) {
-    const out = document.createElement(eltType);
-    out.classList.add(className);
-    out.textContent = text;
-    return out;
+const modalTemplateString = `
+    <div id="{{modalId}}" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('{{modalId}}')">&times;</span>
+            <div class="modal-header">
+                <h1>{{title}}</h1>
+                <div class="tools">
+                    <i class="fab fa-figma"></i>
+                </div>
+            </div>
+            <div class="modal-main-content">
+                <div class="modal-image-container">
+                    {{#each modalMedia}}
+                        {{#if (ifEquals this.type "image")}}
+                        <img src="{{this.src}}"/>
+                        {{/if}}
+                        {{#if (ifEquals this.type "video")}}
+                            {{> videoElement this}}
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+const modalTemplate  = Handlebars.compile(modalTemplateString);
+function createModalWithTemplate(galleryElt) {
+    const modalContainer = document.createElement("div");
+    modalContainer.innerHTML = modalTemplate(galleryElt);
+    return modalContainer.children[0];
 }
 
-function simpleImage(src) {
-    const out = document.createElement("img");
-    out.setAttribute("src", src);
-    return out;
-}
-
-function createElementWithClass(eltType, className) {
-    const out = document.createElement(eltType);
-    out.classList.add(className);
-    return out;
-}
-
-function createVideoElement(src, srcType) {
-    const out = document.createElement("video");
-    out.setAttribute("width", "100%");
-    out.setAttribute("height", "auto");
-    out.setAttribute("autoplay", "");
-    out.setAttribute("muted", "");
-    out.textContent = "Your browser does not support the video tag."
-    const sourceElt = document.createElement("source");
-    sourceElt.setAttribute("src", src);
-    sourceElt.setAttribute("type", srcType);
-    out.appendChild(sourceElt);
-    return out;
-}
+const videoTemplateString = `
+    <video width="100%" height="auto" autoplay muted>
+        <source src="{{src}}" type="{{srcType}}"/>
+        Your browser does not support the video tag.
+    </video>
+`;
+Handlebars.registerPartial('videoElement', videoTemplateString);

@@ -73,9 +73,6 @@ function closeModalWithEscape() {
     });
 }
 
-
-
-
 const galleryItems = [
     {
         "modalId": "tickle",
@@ -83,120 +80,109 @@ const galleryItems = [
         "coverImgAltText": "@Tickle",
         "title": "@Tickle",
         "category": "Learning Design",
-
-        "modalImages": [
-            // image urls
-            "assets/tickle/iphone_mock.png",
-            "assets/tickle/project_tickle_info.png",
-            "assets/tickle/tickle_grid.png"
+        "modalMedia": [
+            modalImage("assets/tickle/iphone_mock.png"),
+            modalImage("assets/tickle/project_tickle_info.png"),
+            modalImage("assets/tickle/tickle_grid.png")
         ]
     },
-
-    //
     {
         "modalId": "litw",
         "coverImg": "assets/learning in the wild/coverbookmock.jpg",
         "coverImgAltText": "Learning in the Wild",
         "title": "Learning in the Wild",
         "category": "Learning Design",
-
-        "modalImages": [
-            // image urls
-           "assets/learning%20in%20the%20wild/coverbookmock.jpg",
-           "assets/learning%20in%20the%20wild/project_info_litw.png",
-           "assets/learning%20in%20the%20wild/book_contents_mockup.jpg",
+        "modalMedia": [
+            modalImage("assets/learning%20in%20the%20wild/coverbookmock.jpg"),
+            modalImage("assets/learning%20in%20the%20wild/project_info_litw.png"),
+            modalImage("assets/learning%20in%20the%20wild/book_contents_mockup.jpg")
         ]
     },
-
     {
         "modalId": "socialpopup",
         "coverImg": "assets/social%20pop-up/Mockupcover.jpg",
         "coverImgAltText": "Social Pop-up",
         "title": "Social Pop-up",
         "category": "UX",
-
-        "modalImages": [
-            // image urls
-            "assets/social%20pop-up/Mockupcover.jpg",
-            "assets/social%20pop-up/projectinfopopup.png",
-            "assets/social%20pop-up/sketch_1.png",
-            "assets/social%20pop-up/sketch_2.png",
+        "modalMedia": [
+            modalImage("assets/social%20pop-up/Mockupcover.jpg"),
+            modalImage("assets/social%20pop-up/projectinfopopup.png"),
+            modalImage("assets/social%20pop-up/sketch_1.png"),
+            modalImage("assets/social%20pop-up/sketch_2.png")
         ]
     },
-
     {
         "modalId": "24hour",
         "coverImg": "assets/24-hour%20idea%20blitz/logo_test.png",
         "coverImgAltText": "24-hour",
         "title": "24-hour Idea Blitz",
         "category": "UX",
-
-        "modalImages": [
-            // image urls
-            "assets/24-hour%20idea%20blitz/cover_24hour_project.jpeg",
-            "assets/24-hour%20idea%20blitz/project%20info%2024-hour.png",
+        "modalMedia": [
+            modalImage("assets/24-hour%20idea%20blitz/cover_24hour_project.jpeg"),
+            modalImage("assets/24-hour%20idea%20blitz/project%20info%2024-hour.png"),
+            modalVideo("assets/24-hour%20idea%20blitz/iMac_Mockup_24Blitz.mp4", "video/mp4")
         ]
     },
-
     {
         "modalId": "cannes",
         "coverImg": "assets/cannes young lions/Cover_CannesYoungLions.png",
         "coverImgAltText": "Cannes Young Lions",
         "title": "Cannes Young Lions",
         "category": "Strategic Planning, UX",
-
-        "modalImages": [
-            // image urls
-            "assets/cannes%20young%20lions/Cover_CannesYoungLions.png",
-            "assets/cannes%20young%20lions/Brief_Cannes.png",
-            "assets/cannes%20young%20lions/Howitworks_Cannes.png",
-            "assets/cannes%20young%20lions/Magazine%20Mockup.jpg",
+        "modalMedia": [
+            modalImage("assets/cannes%20young%20lions/Cover_CannesYoungLions.png"),
+            modalImage("assets/cannes%20young%20lions/Brief_Cannes.png"),
+            modalImage("assets/cannes%20young%20lions/Howitworks_Cannes.png"),
+            modalImage("assets/cannes%20young%20lions/Magazine%20Mockup.jpg")
         ]
     },
-
     {
         "modalId": "afterschool",
         "coverImg": "assets/Afterschool/Afterschool_Assets-02.png",
         "coverImgAltText": "Afterschool",
         "title": "Afterschool",
         "category": "UX",
-
-        "modalImages": [
-            // image urls
-            "assets/Afterschool/Afterschool_Assets-02.png",
-            "assets/Afterschool/background_after.jpg",
-            "assets/Afterschool/problem_after.jpg",
-            "assets/Afterschool/problem_interview.jpg",
-            "assets/Afterschool/hmw_after.jpg",
-            "assets/Afterschool/mockupafter_1.jpg",
-            "assets/Afterschool/mockupafter_2.jpg.jpg",
+        "modalMedia": [
+            modalImage("assets/Afterschool/Afterschool_Assets-02.png"),
+            modalImage("assets/Afterschool/background_after.jpg"),
+            modalImage("assets/Afterschool/problem_after.jpg"),
+            modalImage("assets/Afterschool/problem_interview.jpg"),
+            modalImage("assets/Afterschool/hmw_after.jpg"),
+            modalImage("assets/Afterschool/mockupafter_1.jpg"),
+            modalImage("assets/Afterschool/mockupafter_2.jpg.jpg")
         ]
-    },
+    }
 ]
+
+// used when defining gallery item elements
+function modalImage(src) {
+    return {"type": "image", "src": src};
+}
+
+// used when defining gallery item videos
+function modalVideo(src, srcType) {
+    return {"type": "video", "src": src, "srcType": srcType};
+}
 
 const galleryLoaded = new Event("galleryLoaded")
 
-// add the gallery items!
+// add the gallery items when the document loads!
 document.addEventListener("DOMContentLoaded", function () {
     const galleryContainer = document.getElementById("gallery");
     galleryItems.forEach((galleryElt) => {
         // first add the gallery item
-        const galleryItem = document.createElement("div");
-        galleryItem.classList.add("gallery-item");
+        const galleryItem = createElementWithClass("div", "gallery-item");
         const clickTargetContainer = document.createElement("a");
         clickTargetContainer.addEventListener("click", openModal.bind(this, galleryElt.modalId));
         clickTargetContainer.setAttribute("href", "#");
         galleryItem.appendChild(clickTargetContainer);
         // cover image
-        const coverContainer = document.createElement("div");
-        coverContainer.classList.add("img-container");
-        const coverImg = document.createElement("img");
-        coverImg.setAttribute("src", galleryElt.coverImg);
+        const coverContainer = createElementWithClass("div", "img-container");
+        const coverImg = simpleImage(galleryElt.coverImg);
         coverContainer.appendChild(coverImg);
         clickTargetContainer.appendChild(coverContainer);
         // caption
-        const caption = document.createElement("div");
-        caption.classList.add("caption");
+        const caption = createElementWithClass("div", "caption");
         const captionChildren = [
             simpleTextElementWithClass("h1", "title", galleryElt.title),
             simpleTextElementWithClass("h2", "category", galleryElt.category),
@@ -206,55 +192,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // now add gallery item to section
         galleryContainer.appendChild(galleryItem);
-        // add modal content as sibling (it's hidden by css until opened)
-
-        const modalContainer = document.createElement("div");
-        modalContainer.setAttribute("id", galleryElt.modalId);
-        modalContainer.classList.add("modal");
-        const modalContent = document.createElement("div");
-        modalContent.classList.add("modal-content");
-        modalContainer.appendChild(modalContent);
-        // modal controls
-        const closeButton = document.createElement("span");
-        closeButton.classList.add("close");
-        closeButton.onclick = closeModal.bind(this, galleryElt.modalId);
-        closeButton.textContent = "\u00d7";
-        modalContent.appendChild(closeButton);
-        const modalHeader = document.createElement("div");
-        modalHeader.classList.add("modal-header");
-        modalHeader.appendChild(simpleTextElement("h1", galleryElt.title));
-        modalContent.append(modalHeader);
-
-        const tools = document.createElement("div");
-        tools.classList.add("tools");
-        const figmaContainer = document.createElement("i");
-        figmaContainer.classList.add(...["fab", "fa-figma"]);
-        tools.appendChild(figmaContainer);
-        modalHeader.append(tools);
-
-        // modal main content
-        const modalMainContent = document.createElement("div");
-        modalMainContent.classList.add("modal-main-content");
-        const modalImageContainer = document.createElement("div");
-        modalImageContainer.classList.add("modal-image-container");
-        // add images to image container
-        const modalImageElts = galleryElt.modalImages.map(src => {
-            return simpleImage(src);
-        });
-        modalImageContainer.append(...modalImageElts);
-        modalMainContent.appendChild(modalImageContainer);
-        modalContent.appendChild(modalMainContent);
-        galleryContainer.appendChild(modalContainer);
-
+        // now add the modal for the item as a sibling
+        galleryContainer.appendChild(createModal(galleryElt));
     });
+    document.dispatchEvent(galleryLoaded);
 });
+
+function createModal(galleryElt) {
+    const modalContainer = createElementWithClass("div", "modal");
+    modalContainer.setAttribute("id", galleryElt.modalId);
+    const modalContent = createElementWithClass("div", "modal-content");
+    modalContainer.appendChild(modalContent);
+    // modal controls
+    const closeButton = document.createElement("span");
+    closeButton.classList.add("close");
+    closeButton.onclick = closeModal.bind(this, galleryElt.modalId);
+    closeButton.textContent = "\u00d7";
+    modalContent.appendChild(closeButton);
+    const modalHeader = createElementWithClass("div", "modal-header");
+    modalHeader.appendChild(simpleTextElement("h1", galleryElt.title));
+    modalContent.append(modalHeader);
+
+    const tools = createElementWithClass("div", "tools");
+    const figmaContainer = document.createElement("i");
+    figmaContainer.classList.add(...["fab", "fa-figma"]);
+    tools.appendChild(figmaContainer);
+    modalHeader.append(tools);
+
+    // modal main content
+    const modalMainContent = createElementWithClass("div", "modal-main-content");
+    const modalImageContainer = createElementWithClass("div", "modal-image-container");
+    // add media elements to image container
+    const modalMediaElements = galleryElt.modalMedia.map(mediaElt => {
+        if (mediaElt.type === "video") {
+            return createVideoElement(mediaElt.src, mediaElt.srcType);
+        } else if (mediaElt.type === "image") {
+            return simpleImage(mediaElt.src);
+        }
+    });
+    modalImageContainer.append(...modalMediaElements);
+    modalMainContent.appendChild(modalImageContainer);
+    modalContent.appendChild(modalMainContent);
+    return modalContainer;
+}
 
 function simpleTextElement(eltType, text) {
     const out = document.createElement(eltType);
     out.textContent = text;
     return out;
 }
-
 
 function simpleTextElementWithClass(eltType, className, text) {
     const out = document.createElement(eltType);
@@ -266,5 +252,25 @@ function simpleTextElementWithClass(eltType, className, text) {
 function simpleImage(src) {
     const out = document.createElement("img");
     out.setAttribute("src", src);
+    return out;
+}
+
+function createElementWithClass(eltType, className) {
+    const out = document.createElement(eltType);
+    out.classList.add(className);
+    return out;
+}
+
+function createVideoElement(src, srcType) {
+    const out = document.createElement("video");
+    out.setAttribute("width", "100%");
+    out.setAttribute("height", "auto");
+    out.setAttribute("autoplay", "");
+    out.setAttribute("muted", "");
+    out.textContent = "Your browser does not support the video tag."
+    const sourceElt = document.createElement("source");
+    sourceElt.setAttribute("src", src);
+    sourceElt.setAttribute("type", srcType);
+    out.appendChild(sourceElt);
     return out;
 }

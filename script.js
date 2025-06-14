@@ -77,7 +77,6 @@ const galleryItems = [
     {
         "modalId": "tickle",
         "coverImg": "assets/tickle/coverlogo.jpg",
-        "coverImgAltText": "@Tickle",
         "title": "@Tickle",
         "category": "Learning Design",
         "modalMedia": [
@@ -89,7 +88,6 @@ const galleryItems = [
     {
         "modalId": "litw",
         "coverImg": "assets/learning in the wild/coverbookmock.jpg",
-        "coverImgAltText": "Learning in the Wild",
         "title": "Learning in the Wild",
         "category": "Learning Design",
         "modalMedia": [
@@ -101,7 +99,6 @@ const galleryItems = [
     {
         "modalId": "socialpopup",
         "coverImg": "assets/social%20pop-up/Mockupcover.jpg",
-        "coverImgAltText": "Social Pop-up",
         "title": "Social Pop-up",
         "category": "UX",
         "modalMedia": [
@@ -114,7 +111,6 @@ const galleryItems = [
     {
         "modalId": "24hour",
         "coverImg": "assets/24-hour%20idea%20blitz/logo_test.png",
-        "coverImgAltText": "24-hour",
         "title": "24-hour Idea Blitz",
         "category": "UX",
         "modalMedia": [
@@ -126,7 +122,6 @@ const galleryItems = [
     {
         "modalId": "cannes",
         "coverImg": "assets/cannes young lions/Cover_CannesYoungLions.png",
-        "coverImgAltText": "Cannes Young Lions",
         "title": "Cannes Young Lions",
         "category": "Strategic Planning, UX",
         "modalMedia": [
@@ -139,7 +134,6 @@ const galleryItems = [
     {
         "modalId": "afterschool",
         "coverImg": "assets/Afterschool/Afterschool_Assets-02.png",
-        "coverImgAltText": "Afterschool",
         "title": "Afterschool",
         "category": "UX",
         "modalMedia": [
@@ -219,7 +213,7 @@ const modalTemplateString = `
                 <div class="modal-image-container">
                     {{#each modalMedia}}
                         {{#if (ifEquals this.type "image")}}
-                        <img src="{{this.src}}"/>
+                            <img src="{{this.src}}"/>
                         {{/if}}
                         {{#if (ifEquals this.type "video")}}
                             {{> videoElement this}}

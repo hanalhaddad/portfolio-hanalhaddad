@@ -122,12 +122,12 @@ const galleryItems = [
 
     {
         "modalId": "24hour",
-        "coverImg": "assets/24-hour%20idea%20blitz/logo_test.png",
+        "coverImg": "assets/24-hour%20idea%20blitz/24houridea_rise_cover.png",
         "title": "24-hour Idea Blitz",
-        "category": "UX",
+        "category": "Learning Design",
         "modalMedia": [
             modalImage("assets/24-hour%20idea%20blitz/cover_24hour_project.jpeg"),
-            modalImage("assets/24-hour%20idea%20blitz/project%20info%2024-hour.png"),
+            modalImage("assets/24-hour%20idea%20blitz/24hour_text.png"),
             modalVideo("assets/24-hour%20idea%20blitz/iMac_Mockup_24Blitz.mp4", "video/mp4")
         ]
     },

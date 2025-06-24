@@ -115,7 +115,7 @@ const galleryItems = [
         "category": "Learning Design",
         "modalMedia": [
             modalImage("assets/learning%20in%20the%20wild/coverbookmock.jpg"),
-            modalImage("assets/learning%20in%20the%20wild/project_info_litw.png"),
+            modalImage("assets/learning%20in%20the%20wild/LITW BRIEF.png"),
             modalImage("assets/learning%20in%20the%20wild/book_contents_mockup.jpg")
         ]
     },
@@ -139,9 +139,10 @@ const galleryItems = [
         "category": "UX",
         "modalMedia": [
             modalImage("assets/social%20pop-up/Mockupcover.jpg"),
-            modalImage("assets/social%20pop-up/projectinfopopup.png"),
-            modalImage("assets/social%20pop-up/sketch_1.png"),
-            modalImage("assets/social%20pop-up/sketch_2.png")
+            modalImage("assets/social%20pop-up/mock_up_2.png"),
+            modalImage("assets/social%20pop-up/socialpopup_desc.png"),
+            modalImage("assets/social%20pop-up/sketch1.png"),
+            modalImage("assets/social%20pop-up/sketches_2.png")
         ]
     },
 

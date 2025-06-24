@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Strategic Planner",
         "Learning Designer",
         "Problem-Solver",
-        "Conceptual Creator",
         "Digital Doodler",
         "Pattern Searcher",
         "Growth Seeker",

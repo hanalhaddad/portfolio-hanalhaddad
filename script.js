@@ -111,7 +111,7 @@ const galleryItems = [
         "modalId": "litw",
         "coverImg": "assets/learning in the wild/coverbookmock.jpg",
         "title": "Learning in the Wild",
-        "category": "Learning Design",
+        "category": "Research, Learning Design",
         "modalMedia": [
             modalImage("assets/learning%20in%20the%20wild/coverbookmock.jpg"),
             modalImage("assets/learning%20in%20the%20wild/LITW BRIEF.png"),
@@ -141,6 +141,18 @@ const galleryItems = [
             modalImage("assets/social%20pop-up/socialpopup_desc.png"),
             modalImage("assets/social%20pop-up/sketch1.png"),
             modalImage("assets/social%20pop-up/sketches_2.png")
+        ]
+    },
+
+    {
+        "modalId": "BottleforBotol",
+        "coverImg": "assets/bottleforbotol/bottleforbotol_logo.png",
+        "title": "Bottle for Botol",
+        "category": "Visual Design",
+        "modalMedia": [
+            modalImage("assets/bottleforbotol/bottleforbotol_logo.png"),
+            modalImage("assets/bottleforbotol/BFB_project.png"),
+            modalImage("assets/bottleforbotol/visualidentity_promotional.png"),
         ]
     },
 

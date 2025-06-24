@@ -133,11 +133,10 @@ const galleryItems = [
 
     {
         "modalId": "socialpopup",
-        "coverImg": "assets/social%20pop-up/Mockupcover.jpg",
+        "coverImg": "assets/social%20pop-up/mockup_white.png",
         "title": "Social Pop-up",
         "category": "UX",
         "modalMedia": [
-            modalImage("assets/social%20pop-up/Mockupcover.jpg"),
             modalImage("assets/social%20pop-up/mock_up_2.png"),
             modalImage("assets/social%20pop-up/socialpopup_desc.png"),
             modalImage("assets/social%20pop-up/sketch1.png"),

@@ -93,6 +93,7 @@ const galleryItems = [
         "category": "Published Paper",
         "modalMedia": [
             modalImage("assets/iLRN2024/iLRN_cover.png"),
+            modalImage("assets/iLRN2024/ilrn_background.png"),
             modalImage("assets/iLRN2024/iLRN_abstract.png"),
         ]
     },
@@ -103,6 +104,20 @@ const galleryItems = [
         "title": "workinclass",
         "category": "Learning Design",
         "modalMedia": [
+            modalImage("assets/workinclass/wicslide1.jpg"),
+            modalImage("assets/workinclass/wicslide2.jpg"),
+            modalImage("assets/workinclass/wicslide3.jpg"),
+            modalImage("assets/workinclass/wicslide4.jpg"),
+            modalImage("assets/workinclass/wicslide5.jpg"),
+            modalImage("assets/workinclass/wicslide6.jpg"),
+            modalImage("assets/workinclass/wicslide7.jpg"),
+            modalImage("assets/workinclass/wicslide8.jpg"),
+            modalImage("assets/workinclass/wicslide9.jpg"),
+            modalImage("assets/workinclass/wicslide10.jpg"),
+            modalImage("assets/workinclass/wicslide11.jpg"),
+            modalImage("assets/workinclass/wicslide12.jpg"),
+            modalImage("assets/workinclass/wicslide13.jpg"),
+            modalImage("assets/workinclass/wicslide14.jpg"),
             modalImage("assets/workinclass/ECT_workinclass_poster_rgb.jpg"),
         ]
     },
@@ -215,9 +230,6 @@ const modalTemplateString = `
             <span class="close" onclick="closeModal('{{modalId}}')">&times;</span>
             <div class="modal-header">
                 <h1>{{title}}</h1>
-                <div class="tools">
-                    <i class="fab fa-figma"></i>
-                </div>
             </div>
             <div class="modal-main-content">
                 <div class="modal-image-container">

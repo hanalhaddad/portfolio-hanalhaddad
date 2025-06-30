@@ -82,7 +82,7 @@ const galleryItems = [
             modalImage("assets/cannes%20young%20lions/Cover_CannesYoungLions.png"),
             modalImage("assets/cannes%20young%20lions/Brief_Cannes.png"),
             modalImage("assets/cannes%20young%20lions/Howitworks_Cannes.png"),
-            modalImage("assets/cannes%20young%20lions/Magazine%20Mockup.jpg")
+            modalImage("assets/cannes%20young%20lions/magazinepublication.png")
         ]
     },
 
@@ -102,7 +102,7 @@ const galleryItems = [
         "modalId": "workinclass",
         "coverImg": "assets/workinclass/workinclass_logo_cover.png",
         "title": "workinclass",
-        "category": "Learning Design",
+        "category": "Learning Design, UX",
         "modalMedia": [
             modalImage("assets/workinclass/wicslide1.jpg"),
             modalImage("assets/workinclass/wicslide2.jpg"),
@@ -126,7 +126,7 @@ const galleryItems = [
         "modalId": "litw",
         "coverImg": "assets/learning in the wild/coverbookmock.jpg",
         "title": "Learning in the Wild",
-        "category": "Research, Learning Design",
+        "category": "Learning Design, Research",
         "modalMedia": [
             modalImage("assets/learning%20in%20the%20wild/coverbookmock.jpg"),
             modalImage("assets/learning%20in%20the%20wild/LITW BRIEF.png"),
@@ -184,6 +184,22 @@ const galleryItems = [
             modalImage("assets/bottleforbotol/bottleforbotol_logo.png"),
             modalImage("assets/bottleforbotol/BFB_project.png"),
             modalImage("assets/bottleforbotol/visualidentity_promotional.png"),
+        ]
+    },
+
+    {
+        "modalId": "vuse",
+        "coverImg": "assets/vuse/vusecover.jpg",
+        "title": "Vuse",
+        "category": "Strategic Planning",
+        "modalMedia": [
+            modalImage("assets/vuse/vusecover.jpg"),
+            modalImage("assets/vuse/slide3.jpg"),
+            modalImage("assets/vuse/slide4.jpg"),
+            modalImage("assets/vuse/slide5.jpg"),
+            modalImage("assets/vuse/slide6.jpg"),
+            modalImage("assets/vuse/slide7.jpg"),
+            modalImage("assets/vuse/slide8.jpg"),
         ]
     },
 

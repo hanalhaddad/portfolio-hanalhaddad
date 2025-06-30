@@ -160,6 +160,16 @@ const galleryItems = [
     },
 
     {
+        "modalId": "hondacity",
+        "coverImg": "assets/hondacity/COVER.jpg",
+        "title": "Honda City",
+        "category": "Strategic Planning",
+        "modalMedia": [
+            modalImage("assets/hondacity/COVER.jpg"),
+        ]
+    },
+
+    {
         "modalId": "BottleforBotol",
         "coverImg": "assets/bottleforbotol/bottleforbotol_logo.png",
         "title": "Bottle for Botol",

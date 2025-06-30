@@ -166,6 +166,12 @@ const galleryItems = [
         "category": "Strategic Planning",
         "modalMedia": [
             modalImage("assets/hondacity/COVER.jpg"),
+            modalImage("assets/hondacity/slide 2 (1).jpg"),
+            modalImage("assets/hondacity/slide 3 (2).jpg"),
+            modalImage("assets/hondacity/slide 4 (1).jpg"),
+            modalImage("assets/hondacity/slide 5 (1).jpg"),
+            modalImage("assets/hondacity/slide 6 (2).jpg"),
+            modalVideo("assets/hondacity/mockupsitehonda.mp4", "video/mp4")
         ]
     },
 

@@ -87,6 +87,21 @@ const galleryItems = [
     },
 
     {
+        "modalId": "dpodatainplay",
+        "coverImg": "assets/dpodatainplay/datainplaycover.png",
+        "title": "United Nations - Data in Play",
+        "category": "Learning Design",
+        "modalMedia": [
+            modalImage("assets/dpodatainplay/datainplaycover.png"),
+            modalImage("assets/dpodatainplay/inferno.png"),
+            modalImage("assets/dpodatainplay/brief.png"),
+            modalImage("assets/dpodatainplay/proposition.png"),
+            modalImage("assets/dpodatainplay/usecases.png"),
+            modalImage("assets/dpodatainplay/framework.png"),
+        ]
+    },
+
+    {
         "modalId": "iLRN2024",
         "coverImg": "assets/iLRN2024/iLRN_thumbnail.png",
         "title": "iLRN 2024",
@@ -119,6 +134,25 @@ const galleryItems = [
             modalImage("assets/workinclass/wicslide13.jpg"),
             modalImage("assets/workinclass/wicslide14.jpg"),
             modalImage("assets/workinclass/ECT_workinclass_poster_rgb.jpg"),
+        ]
+    },
+
+    {
+        "modalId": "creativethinkingseminar",
+        "coverImg": "assets/creativethinkingseminar/thinklikeacreativecover.png",
+        "title": "Think Like a Creative",
+        "category": "Learning Design, UX",
+        "modalMedia": [
+            modalImage("assets/creativethinkingseminar/thinklikeacreativecover.png"),
+            modalImage("assets/creativethinkingseminar/methodslide.png"),
+            modalImage("assets/creativethinkingseminar/aboutprojectnexus.png"),
+            modalImage("assets/creativethinkingseminar/creativequickguide.png"),
+            modalImage("assets/creativethinkingseminar/creativethinkingopp.png"),
+            modalImage("assets/creativethinkingseminar/userneeds.png"),
+            modalImage("assets/creativethinkingseminar/nikecasestudy.png"),
+            modalImage("assets/creativethinkingseminar/hbscasestudy.png"),
+            modalImage("assets/creativethinkingseminar/instructionaldesignopp.png"),
+
         ]
     },
 

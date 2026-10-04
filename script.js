@@ -97,7 +97,6 @@ const galleryItems = [
             modalImage("assets/dpodatainplay/brief.png"),
             modalImage("assets/dpodatainplay/proposition.png"),
             modalImage("assets/dpodatainplay/usecases.png"),
-            modalImage("assets/dpodatainplay/framework.png"),
         ]
     },
 
